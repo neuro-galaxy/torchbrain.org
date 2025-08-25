@@ -14,7 +14,7 @@ function Landing() {
       <div className="flex justify-between max-w-[1000px] mx-auto">
         <PackageCard
           title="torch_brain"
-          description="DL pipeline building blocks and models."
+          description="DL pipeline building blocks and models"
         />
         <PackageCard
           title="brainsets"
