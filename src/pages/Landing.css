@@ -1,0 +1,23 @@
+.custom-headline-bg {
+  background: radial-gradient(
+    ellipse at top,
+    rgba(217, 217, 217, 0.2) -10%,
+    rgba(115, 115, 115, 0) 50%
+  );
+}
+
+.custom-headline {
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
+}
+
+
+.custom-feature-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: rgba(150, 150, 150, 0.01);
+    border: solid 0.5px rgba(200, 200, 255, 0.12);
+    border-radius: 10px;
+}

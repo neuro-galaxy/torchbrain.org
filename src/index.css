@@ -18,17 +18,15 @@
   }
 }
 
-:root {
-  --max-width: 1300px;
-}
-
 @theme {
+  --font-sans: "Manrope", sans-serif;
   --font-mono: "Martian Mono", monospace;
+
+  --w-wide: 1300px;
 }
 
 body {
   background-color: #1e1e1e;
-  font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 300;
@@ -36,11 +34,3 @@ body {
   color: #fff;
 }
 
-.custom-headline {
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
-  background: radial-gradient(
-    ellipse at top,
-    rgba(217, 217, 217, 0.02) -10%,
-    rgba(115, 115, 115, 0) 50%
-  );
-}

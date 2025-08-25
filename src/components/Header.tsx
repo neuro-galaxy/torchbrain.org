@@ -62,7 +62,7 @@ function Header() {
       className="header py-6 border-b-gray-600"
       style={{ borderBottomWidth: "0.5px" }}
     >
-      <div className="mx-auto" style={{ maxWidth: "var(--max-width)" }}>
+      <div className="mx-auto max-w-(--w-wide)">
         <div className="flex justify-between">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-white"></div>
