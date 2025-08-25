@@ -20,7 +20,7 @@ function Landing() {
         </div>
       </div>
 
-      <div className="flex justify-between max-w-[1000px] mx-auto mb-32">
+      <div className="flex justify-around max-w-(--w-wide) mx-auto mb-32">
         <PackageCard
           title="torch_brain"
           description="DL pipeline building blocks and models"
@@ -53,7 +53,7 @@ function Landing() {
           <span className="font-bold text-lg text-center">
             Based on PyTorch
           </span>
-          <div className="w-60 h-32"></div>
+          <img className="h-24" src="/images/pytorch.png" alt="PyTorch logo"></img>
           <span className="font-extralight text-center">
             Carry over your deep learning expertise
           </span>
