@@ -24,14 +24,17 @@ function Landing() {
         <PackageCard
           title="torch_brain"
           description="DL pipeline building blocks and models"
+          href="https://github.com/neuro-galaxy/torch_brain"
         />
         <PackageCard
           title="brainsets"
           description="A collection of neural datasets"
+          href="https://github.com/neuro-galaxy/brainsets"
         />
         <PackageCard
           title="temporaldata"
           description="High-performance neural data format"
+          href="https://github.com/neuro-galaxy/temporaldata"
         />
       </div>
 
@@ -96,16 +99,18 @@ function Landing() {
 function PackageCard({
   title,
   description,
+  href,
 }: {
   title: string;
   description: string;
+  href: string;
 }) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-40 h-40 bg-white"></div>
+    <a className="flex flex-col items-center" href={href}>
+      <div className="w-40 h-40 bg-white transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5"></div>
       <span className="mt-4 font-mono font-bold text-xl">{title}</span>
       <span className="mt-1">{description}</span>
-    </div>
+    </a>
   );
 }
 
