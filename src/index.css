@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --max-width: 1300px;
+}
+
 body {
     background-color: #1E1E1E;
     font-family: 'Manrope', sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+
+    color: #fff;
+}
+
+.custom-headline {
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.25));
+    background: radial-gradient(ellipse at top, rgba(217,217,217,0.05) -10%, rgba(115,115,115,0) 60%);
 }
