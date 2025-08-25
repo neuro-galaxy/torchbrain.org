@@ -28,3 +28,7 @@
   border-radius: 2px;
   box-sizing: border-box;
 }
+
+.separator {
+  border-top: solid 0.5px rgba();
+}

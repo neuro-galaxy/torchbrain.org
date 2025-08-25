@@ -43,10 +43,10 @@ function Landing() {
       </div>
 
 
-      <div className="flex flex-col w-(--w-wide) mx-auto py-8">
-        <span className="text-center font-bold text-3xl">Features</span>
+      <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)">
+        <span className="text-center font-bold text-3xl custom-headline">Features</span>
 
-        <div className="flex flex-wrap gap-[25px] justify-center mt-8">
+        <div className="flex flex-wrap justify-center gap-[25px] mt-8">
           <div className="w-[500px] custom-feature-box">
             <span className="font-bold text-lg text-center">
               Multi-recording training
@@ -71,7 +71,7 @@ function Landing() {
             </span>
           </div>
 
-          <div className="w-[550px] custom-feature-box">
+          <div className="w-[500px] custom-feature-box">
             <span className="font-bold text-lg text-center">
               Advanced Data Samplers
             </span>
@@ -141,6 +141,7 @@ interface FeatureCardSamplerState {
 }
 
 function FeatureCardSamplers() {
+  const total_length = 450;
   const [samplerState, setSamplerState] = useState<FeatureCardSamplerState>({
     length: 20,
     num_samples: 10,
@@ -168,7 +169,6 @@ function FeatureCardSamplers() {
   };
 
   const initState = () => {
-    const total_length = 500;
     const sample_length = random(20, 40);
     const offset = random(0, sample_length);
     const num_samples = Math.floor((total_length - offset) / sample_length);
@@ -190,7 +190,7 @@ function FeatureCardSamplers() {
   }, []); // Remove setSamplerState from dependencies
 
   return (
-    <div className="w-[500px] flex flex-col justify-center">
+    <div className="=flex flex-col justify-center" style={{width: `${total_length}px`}}>
       <div className="h-[80px] border-b-[0.5px] flex">
         {Array.from(Array(samplerState.num_samples).keys()).map((i) => (
           <div
