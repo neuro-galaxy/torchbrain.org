@@ -5,10 +5,18 @@ function Landing() {
     <div>
       <Header />
 
-      <div className="text-center font-extrabold text-5xl py-24 custom-headline">
-        Deep Learning on Neural Data,
-        <br />
-        Supercharged.
+      <div className="flex flex-col items-center gap-8 text-center py-24">
+        <div className="font-extrabold text-5xl custom-headline">
+          Deep Learning on Neural Data,
+          <br />
+          Supercharged.
+        </div>
+
+        <div className="max-w-[700px] text-xl font-extralight text-gray-300">
+          Torch Brain is a framework for building the next generation of
+          computational neuroscience models, focused on high-performance and
+          ease of development.
+        </div>
       </div>
 
       <div className="flex justify-between max-w-[1000px] mx-auto">
