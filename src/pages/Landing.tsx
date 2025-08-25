@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import "./Landing.css";
 
@@ -56,7 +57,11 @@ function Landing() {
           <span className="font-bold text-lg text-center">
             Based on PyTorch
           </span>
-          <img className="h-24" src="/images/pytorch.png" alt="PyTorch logo"></img>
+          <img
+            className="h-24"
+            src="/images/pytorch.png"
+            alt="PyTorch logo"
+          ></img>
           <span className="font-extralight text-center">
             Carry over your deep learning expertise
           </span>
@@ -66,7 +71,7 @@ function Landing() {
           <span className="font-bold text-lg text-center">
             Advanced Data Samplers
           </span>
-          <div className="w-60 h-40"></div>
+          <FeatureCardSamplers/>
           <span className="font-extralight text-center">
             Sample data slices in continuous time
           </span>
@@ -89,7 +94,8 @@ function Landing() {
           </span>
           <div className="w-60 h-40"></div>
           <span className="font-extralight text-center max-w-[400px]">
-          A collection of transforms and augmentations like spike binning and neuron dropout.
+            A collection of transforms and augmentations like spike binning and
+            neuron dropout.
           </span>
         </div>
       </div>
@@ -112,11 +118,26 @@ function PackageCard({
 }) {
   return (
     <a className="flex flex-col items-center" href={href}>
-      <img className="h-50 transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5" src={img_src}></img>
+      <img
+        className="h-50 transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5"
+        src={img_src}
+      ></img>
       <span className="mt-4 font-mono font-bold text-xl">{title}</span>
       <span className="mt-1">{description}</span>
     </a>
   );
+}
+
+interface FeatureCardSamplerState {
+  length: number;
+  visible: boolean[];
+}
+
+function FeatureCardSamplers() {
+  // useState(FeatureCardSamplerState)
+  return <div className="w-[500px] h-40">
+
+  </div>;
 }
 
 export default Landing;

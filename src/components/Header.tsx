@@ -22,7 +22,7 @@ function Dropdown({ label, items }: DropdownProps) {
               className="block px-4 py-2 hover:bg-slate-700"
             >
               <div className="flex items-center gap-2">
-                <img className="h-10" src={item.img_src} />
+                {/* <img className="h-10" src={item.img_src} /> */}
                 <span className="font-mono text-xs font-normal">
                   {item.label}
                 </span>
