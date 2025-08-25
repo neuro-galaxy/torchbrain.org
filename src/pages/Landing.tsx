@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import "./Landing.css";
 
@@ -71,7 +71,7 @@ function Landing() {
           <span className="font-bold text-lg text-center">
             Advanced Data Samplers
           </span>
-          <FeatureCardSamplers/>
+          <FeatureCardSamplers />
           <span className="font-extralight text-center">
             Sample data slices in continuous time
           </span>
@@ -130,14 +130,53 @@ function PackageCard({
 
 interface FeatureCardSamplerState {
   length: number;
+  num_samples: number;
   visible: boolean[];
+  offset: number;
 }
 
 function FeatureCardSamplers() {
-  // useState(FeatureCardSamplerState)
-  return <div className="w-[500px] h-40">
+  const [samplerState, setSamplerState] = useState<FeatureCardSamplerState>({
+    length: 20,
+    num_samples: 10,
+    visible: Array(20).fill(true),
+    offset: 0.0,
+  });
 
-  </div>;
+  useEffect(() => {
+    const total_length = 500;
+    const sample_length = random(10, 40);
+    const offset = random(0, sample_length);
+    const num_samples = Math.floor((total_length - offset) / sample_length);
+    const state = {
+      length: sample_length,
+      num_samples: num_samples,
+      visible: Array(num_samples).fill(true),
+      offset: offset,
+    };
+
+    setSamplerState(state);
+  }, [setSamplerState]);
+
+  return (
+    <div className="w-[500px] h-[160px] flex flex-col justify-center">
+      <div className="w-full h-[80px] border-b-[0.5px] flex">
+        {Array.from(Array(samplerState.num_samples).keys()).map((i) => (
+          <div
+            className="h-full custom-sample-block"
+            style={{
+              transform: `translateX(${samplerState.offset}px)`,
+              width: `${samplerState.length}px`,
+            }}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function random(min: number, max: number): number {
+  return Math.random() * (max - min) + min;
 }
 
 export default Landing;
