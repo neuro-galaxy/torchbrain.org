@@ -22,6 +22,9 @@
     --max-width: 1300px;
 }
 
+@theme {
+    --font-mono: 'Martian Mono', monospace;
+}
 
 body {
     background-color: #1E1E1E;

@@ -39,8 +39,8 @@ function PackageCard({
   return (
     <div className="flex flex-col items-center">
       <div className="w-40 h-40 bg-white"></div>
-      <span className="mt-2 font-mono font-bold text-lg">{title}</span>
-      <span>{description}</span>
+      <span className="mt-4 font-mono font-bold text-xl">{title}</span>
+      <span className="mt-1">{description}</span>
     </div>
   );
 }
