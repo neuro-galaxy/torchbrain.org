@@ -81,12 +81,13 @@ function Header() {
         <div className="flex justify-between">
           <div className="flex items-center gap-1">
             <img className="h-12" src="/images/torchbrain.png" />
-            <h1 className="text-xl font-bold">torch brain</h1>
+            <h1 className="text-xl font-bold">Torch Brain</h1>
           </div>
 
           <div className="flex items-center gap-12 font-medium">
             <Dropdown label="Packages" items={packagesItems} />
             <Dropdown label="Docs" items={docsItems} />
+            <a>Contribute</a>
           </div>
         </div>
       </div>

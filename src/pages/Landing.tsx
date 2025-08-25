@@ -7,14 +7,14 @@ function Landing() {
     <div>
       <Header />
 
-      <div className="flex flex-col items-center gap-8 text-center py-32 custom-headline-bg">
+      <div className="flex flex-col items-center gap-8 text-center pt-32 pb-24 custom-headline-bg">
         <div className="font-extrabold text-6xl custom-headline">
           Deep Learning on Neural Data,
           <br />
           Supercharged.
         </div>
 
-        <div className="max-w-[900px] text-2xl font-extralight text-gray-300">
+        <div className="mt-8 max-w-[900px] text-2xl font-extralight text-gray-300">
           Torch Brain is an ecosystem for building the next generation of
           computational neuroscience models, focused on high-performance and
           ease of development.
