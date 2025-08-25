@@ -33,6 +33,17 @@ function Landing() {
           description="High-performance neural data format"
         />
       </div>
+
+      <div className="mt-20 max-w-[700px] mx-auto">
+        <div className="flex justify-center gap-10">
+          <div className="w-60 h-40 bg-white"></div>
+          <div className="mt-4">
+            <span className="font-bold">Based on PyTorch</span>
+            <br />
+            test
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
