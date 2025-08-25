@@ -74,7 +74,7 @@ function Header() {
 
   return (
     <div
-      className="header py-3 border-b-gray-600"
+      className="header px-8 py-3 border-b-gray-600"
       style={{ borderBottomWidth: "0.5px" }}
     >
       <div className="mx-auto max-w-(--w-wide)">
