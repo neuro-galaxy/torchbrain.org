@@ -40,7 +40,7 @@ body {
   filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
   background: radial-gradient(
     ellipse at top,
-    rgba(217, 217, 217, 0.05) -10%,
-    rgba(115, 115, 115, 0) 60%
+    rgba(217, 217, 217, 0.02) -10%,
+    rgba(115, 115, 115, 0) 50%
   );
 }
