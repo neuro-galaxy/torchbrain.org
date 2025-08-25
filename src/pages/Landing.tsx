@@ -144,27 +144,23 @@ function FeatureCardSamplers() {
   });
 
   const animate = () => {
-    setSamplerState(prevState => {
-      // Create a new array with all values set to false
+    setSamplerState((prevState) => {
       const newVisible = [...prevState.visible];
-      // Randomly select one index to set to true
-      // Get indices where visible is false
       const falseIndices = prevState.visible
-        .map((visible, index) => visible ? null : index)
-        .filter(index => index !== null) as number[];
-      
-      // Only proceed if there are false indices to choose from
+        .map((visible, index) => (visible ? null : index))
+        .filter((index) => index !== null) as number[];
+
       if (falseIndices.length === 0) return initState();
-      
+
       const idx = falseIndices[Math.floor(Math.random() * falseIndices.length)];
       newVisible[idx] = true;
-      
+
       return {
         ...prevState,
-        visible: newVisible
+        visible: newVisible,
       };
     });
-  }
+  };
 
   const initState = () => {
     const total_length = 500;
@@ -178,8 +174,7 @@ function FeatureCardSamplers() {
       offset: offset,
     };
     return state;
-
-  }
+  };
 
   useEffect(() => {
     const state = initState();
@@ -194,12 +189,12 @@ function FeatureCardSamplers() {
       <div className="h-[80px] border-b-[0.5px] flex">
         {Array.from(Array(samplerState.num_samples).keys()).map((i) => (
           <div
-            key={i} 
+            key={i}
             className="h-full custom-sample-block"
             style={{
               transform: `translateX(${samplerState.offset}px)`,
               width: `${samplerState.length}px`,
-              opacity: samplerState.visible[i] ? 1 : 0, 
+              opacity: samplerState.visible[i] ? 1 : 0,
             }}
           ></div>
         ))}
