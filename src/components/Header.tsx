@@ -11,7 +11,7 @@ interface DropdownProps {
 function Dropdown({ label, items }: DropdownProps) {
   return (
     <div className="relative inline-block group">
-      <button className="group-hover:opacity-80">{label}</button>
+      <button className="group-hover:opacity-80">{label} ▾</button>
       <div className="absolute z-10 right-0 invisible group-hover:visible">
         <div className="mt-2 py-2 bg-slate-800 border-slate-900 rounded-sm">
           {items.map((item, index) => (
