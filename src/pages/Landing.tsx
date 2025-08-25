@@ -37,12 +37,20 @@ function Landing() {
       <div className="mt-20 max-w-[700px] mx-auto">
         <div className="flex justify-center gap-10">
           <div className="w-60 h-40 bg-white"></div>
-          <div className="mt-4">
+          <div className="mt-4 max-w-[400px]">
             <span className="font-bold">Based on PyTorch</span>
             <br />
-            test
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
           </div>
         </div>
+      </div>
+
+
+
+      <div className="w-full h-20">
+
       </div>
     </div>
   );
