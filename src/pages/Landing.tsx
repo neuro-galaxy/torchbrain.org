@@ -139,34 +139,67 @@ function FeatureCardSamplers() {
   const [samplerState, setSamplerState] = useState<FeatureCardSamplerState>({
     length: 20,
     num_samples: 10,
-    visible: Array(20).fill(true),
+    visible: Array(10).fill(false), // Start with all false
     offset: 0.0,
   });
 
-  useEffect(() => {
+  const animate = () => {
+    setSamplerState(prevState => {
+      // Create a new array with all values set to false
+      const newVisible = [...prevState.visible];
+      // Randomly select one index to set to true
+      // Get indices where visible is false
+      const falseIndices = prevState.visible
+        .map((visible, index) => visible ? null : index)
+        .filter(index => index !== null) as number[];
+      
+      // Only proceed if there are false indices to choose from
+      if (falseIndices.length === 0) return initState();
+      
+      const idx = falseIndices[Math.floor(Math.random() * falseIndices.length)];
+      newVisible[idx] = true;
+      
+      return {
+        ...prevState,
+        visible: newVisible
+      };
+    });
+  }
+
+  const initState = () => {
     const total_length = 500;
-    const sample_length = random(10, 40);
+    const sample_length = random(20, 40);
     const offset = random(0, sample_length);
     const num_samples = Math.floor((total_length - offset) / sample_length);
     const state = {
       length: sample_length,
       num_samples: num_samples,
-      visible: Array(num_samples).fill(true),
+      visible: Array(num_samples).fill(false), // Start with all false
       offset: offset,
     };
+    return state;
 
+  }
+
+  useEffect(() => {
+    const state = initState();
     setSamplerState(state);
-  }, [setSamplerState]);
+
+    const id = setInterval(animate, 200); // Slower interval for better visibility
+    return () => clearInterval(id);
+  }, []); // Remove setSamplerState from dependencies
 
   return (
-    <div className="w-[500px] h-[160px] flex flex-col justify-center">
-      <div className="w-full h-[80px] border-b-[0.5px] flex">
+    <div className="w-[500px] flex flex-col justify-center">
+      <div className="h-[80px] border-b-[0.5px] flex">
         {Array.from(Array(samplerState.num_samples).keys()).map((i) => (
           <div
+            key={i} 
             className="h-full custom-sample-block"
             style={{
               transform: `translateX(${samplerState.offset}px)`,
               width: `${samplerState.length}px`,
+              opacity: samplerState.visible[i] ? 1 : 0, 
             }}
           ></div>
         ))}
