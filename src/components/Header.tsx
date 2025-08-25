@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface DropdownItem {
   label: string;
   href: string;
@@ -10,10 +12,21 @@ interface DropdownProps {
 }
 
 function Dropdown({ label, items }: DropdownProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="relative inline-block group">
-      <button className="group-hover:opacity-80">{label} ▾</button>
-      <div className="absolute z-10 right-0 invisible group-hover:visible">
+    <div 
+      className="relative inline-block"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button 
+        className="hover:opacity-80"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {label} ▾
+      </button>
+      <div className={`absolute z-10 right-0 ${isOpen ? 'visible' : 'invisible'}`}>
         <div className="mt-2 py-2 bg-slate-800 border-slate-900 rounded-sm w-[200px]">
           {items.map((item, index) => (
             <a
