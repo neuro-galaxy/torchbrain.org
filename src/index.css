@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
@@ -19,24 +19,28 @@
 }
 
 :root {
-    --max-width: 1300px;
+  --max-width: 1300px;
 }
 
 @theme {
-    --font-mono: 'Martian Mono', monospace;
+  --font-mono: "Martian Mono", monospace;
 }
 
 body {
-    background-color: #1E1E1E;
-    font-family: 'Manrope', sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 300;
+  background-color: #1e1e1e;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
 
-    color: #fff;
+  color: #fff;
 }
 
 .custom-headline {
-    filter: drop-shadow(0 0 12px rgba(255,255,255,0.25));
-    background: radial-gradient(ellipse at top, rgba(217,217,217,0.05) -10%, rgba(115,115,115,0) 60%);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
+  background: radial-gradient(
+    ellipse at top,
+    rgba(217, 217, 217, 0.05) -10%,
+    rgba(115, 115, 115, 0) 60%
+  );
 }
