@@ -42,16 +42,20 @@ function Landing() {
         />
       </div>
 
-
       <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)">
-        <span className="text-center font-bold text-3xl custom-headline">Features</span>
+        <span className="text-center font-bold text-3xl custom-headline">
+          Features
+        </span>
 
         <div className="flex flex-wrap justify-center gap-[25px] mt-8">
-          <div className="w-[500px] custom-feature-box">
+          <div className="w-[440px] custom-feature-box">
             <span className="font-bold text-lg text-center">
               Multi-recording training
             </span>
-            <div className="w-60 h-50"></div>
+            <img
+              className="h-40 my-10"
+              src="/images/features/multi-recording-training.png"
+            />
             <span className="font-extralight text-center">
               Train foundation models on multiple datasets
             </span>
@@ -62,7 +66,7 @@ function Landing() {
               Based on PyTorch
             </span>
             <img
-              className="h-24"
+              className="h-32 my-4"
               src="/images/pytorch.png"
               alt="PyTorch logo"
             ></img>
@@ -190,8 +194,11 @@ function FeatureCardSamplers() {
   }, []); // Remove setSamplerState from dependencies
 
   return (
-    <div className="=flex flex-col justify-center" style={{width: `${total_length}px`}}>
-      <div className="h-[80px] border-b-[0.5px] flex">
+    <div
+      className="=flex flex-col justify-center"
+      style={{ width: `${total_length}px` }}
+    >
+      <div className="h-[100px] border-b-[0.5px] flex">
         {Array.from(Array(samplerState.num_samples).keys()).map((i) => (
           <div
             key={i}
@@ -199,7 +206,8 @@ function FeatureCardSamplers() {
             style={{
               transform: `translateX(${samplerState.offset}px)`,
               width: `${samplerState.length}px`,
-              opacity: samplerState.visible[i] ? 1 : 0,
+              opacity: samplerState.visible[i] ? 1 : 0.2,
+              transition: "0.1s ease-in",
             }}
           ></div>
         ))}
