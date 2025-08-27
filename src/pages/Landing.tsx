@@ -22,25 +22,27 @@ function Landing() {
         </div>
       </div>
 
-      <div className="flex justify-around max-w-(--w-wide) mx-auto my-16">
-        <PackageCard
-          title="torch_brain"
-          description="DL pipeline building blocks and models"
-          href="https://github.com/neuro-galaxy/torch_brain"
-          img_src="/images/torchbrain.png"
-        />
-        <PackageCard
-          title="brainsets"
-          description="A collection of neural datasets"
-          href="https://github.com/neuro-galaxy/brainsets"
-          img_src="/images/brainsets.png"
-        />
-        <PackageCard
-          title="temporaldata"
-          description="Easy-to-use interface for neural data"
-          href="https://github.com/neuro-galaxy/temporaldata"
-          img_src="/images/temporaldata.png"
-        />
+      <div className="flex items-center px-8">
+        <div className="flex flex-col md:flex-row md:items-center justify-around gap-2 md:w-(--w-wide) mx-auto md:my-16">
+          <PackageCard
+            title="torch_brain"
+            description="DL pipeline building blocks and models"
+            href="https://github.com/neuro-galaxy/torch_brain"
+            img_src="/images/torchbrain.png"
+          />
+          <PackageCard
+            title="brainsets"
+            description="A collection of neural datasets"
+            href="https://github.com/neuro-galaxy/brainsets"
+            img_src="/images/brainsets.png"
+          />
+          <PackageCard
+            title="temporaldata"
+            description="Easy-to-use interface for neural data"
+            href="https://github.com/neuro-galaxy/temporaldata"
+            img_src="/images/temporaldata.png"
+          />
+        </div>
       </div>
 
       <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)">
@@ -148,13 +150,15 @@ function PackageCard({
   img_src: string;
 }) {
   return (
-    <a className="flex flex-col items-center" href={href}>
+    <a className="flex md:flex-col items-center" href={href}>
       <img
-        className="h-50 transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5"
+        className="h-30 md:h-50 transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5"
         src={img_src}
       ></img>
-      <span className="mt-4 font-mono font-bold text-xl">{title}</span>
-      <span className="mt-1">{description}</span>
+      <div className="flex flex-col md:items-center">
+        <span className="mt-4 font-mono font-bold text-xl">{title}</span>
+        <span className="mt-1 md:text-center">{description}</span>
+      </div>
     </a>
   );
 }
