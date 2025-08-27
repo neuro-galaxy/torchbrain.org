@@ -52,20 +52,20 @@ function Landing() {
 
         <div className="flex flex-wrap justify-center gap-[25px] mt-8">
           <div className="w-full sm:w-[400px] md:w-[440px] custom-feature-box">
-            <span className="font-bold text-xl text-center">
+            <span className="font-bold text-lg md:text-xl text-center">
               Multi-recording training
             </span>
             <img
               className="w-[400px] h-auto my-10 px-8"
               src="/images/features/multi-recording-training.png"
             />
-            <span className="font-extralight text-lg text-center">
+            <span className="font-extralight md:text-lg text-center">
               Train foundation models on multiple datasets.
             </span>
           </div>
 
           <div className="w-full md:w-[200px] sm:w-[400px] custom-feature-box">
-            <span className="font-bold text-xl text-center">
+            <span className="font-bold text-lg md:text-xl text-center">
               Based on PyTorch
             </span>
             <img
@@ -73,41 +73,41 @@ function Landing() {
               src="/images/pytorch.png"
               alt="PyTorch logo"
             ></img>
-            <span className="font-extralight text-lg text-center">
+            <span className="font-extralight md:text-lg text-center">
               Carry over your deep learning expertise.
             </span>
           </div>
 
           <div className="w-full sm:w-[400px] md:w-[500px] custom-feature-box overflow-hidden">
-            <span className="font-bold text-xl text-center">
+            <span className="font-bold text-lg md:text-xl text-center">
               Advanced Data Samplers
             </span>
             <FeatureCardSamplers />
-            <span className="font-extralight text-lg text-center">
+            <span className="font-extralight md:text-lg text-center">
               Sample arbitrary data slices in continuous time.
             </span>
           </div>
 
           <div className="w-full sm:w-[400px] md:w-[500px] custom-feature-box">
-            <span className="font-bold text-xl text-center">
+            <span className="font-bold text-lg md:text-xl text-center">
               Transforms and Augmentations
             </span>
             <FeatureCardAugmentation />
-            <span className="font-extralight text-lg text-center max-w-[400px]">
+            <span className="font-extralight md:text-lg text-center max-w-[400px]">
               A collection of transforms and augmentations, like spike binning
               and neuron dropout.
             </span>
           </div>
 
           <div className="w-full sm:w-[400px] md:w-[550px] custom-feature-box">
-            <span className="font-bold text-xl text-center">
+            <span className="font-bold text-lg md:text-xl text-center">
               Optimized data-loading pipelines
             </span>
             <img
               className="h-auto w-[400px] my-12"
               src="/images/features/optimized-data-loading.png"
             />
-            <span className="font-extralight text-lg text-center max-w-[400px]">
+            <span className="font-extralight md:text-lg text-center max-w-[400px]">
               Stream data directly from disk during training. Train on datasets
               bigger than your memory limit.
             </span>
