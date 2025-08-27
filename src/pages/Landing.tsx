@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "./Landing.css";
 
 function Landing() {
@@ -85,12 +86,23 @@ function Landing() {
             </span>
           </div>
 
+          <div className="w-[500px] custom-feature-box">
+            <span className="font-bold text-lg text-center">
+              Transforms and Augmentations
+            </span>
+            <FeatureCardAugmentation />
+            <span className="font-extralight text-center max-w-[400px]">
+              A collection of transforms and augmentations like spike binning
+              and neuron dropout.
+            </span>
+          </div>
+
           <div className="w-[550px] custom-feature-box">
             <span className="font-bold text-lg text-center">
               Optimized data-loading pipelines
             </span>
             <img
-              className="h-40 my-4"
+              className="h-48 my-4"
               src="/images/features/optimized-data-loading.png"
             />
             <span className="font-extralight text-center max-w-[400px]">
@@ -98,21 +110,22 @@ function Landing() {
               bigger than your memory limit
             </span>
           </div>
-
-          <div className="w-[550px] custom-feature-box">
-            <span className="font-bold text-lg text-center">
-              Transforms and Augmentations
-            </span>
-            <div className="w-60 h-40"></div>
-            <span className="font-extralight text-center max-w-[400px]">
-              A collection of transforms and augmentations like spike binning
-              and neuron dropout.
-            </span>
-          </div>
         </div>
       </div>
 
-      <div className="w-full h-50"></div>
+      <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)">
+        <span className="text-center font-bold text-3xl custom-headline mb-4">
+          Contribute
+        </span>
+
+        <span className="text-center text-lg">
+          We are new and would appreciate any and all contributions! 
+        </span>
+        <span className="text-center text-xl font-medium">
+          <a href="https://discord.gg/kQNKA6B8ZC"> Join our Discord community! <i className="fa-brands fa-discord"></i></a>
+        </span>
+      </div>
+    <Footer/>
     </div>
   );
 }
@@ -221,6 +234,84 @@ function FeatureCardSamplers() {
 
 function random(min: number, max: number): number {
   return Math.random() * (max - min) + min;
+}
+
+function FeatureCardAugmentation() {
+  const num_neurons = 7;
+  const [state, setState] = useState(Array(num_neurons).fill(true));
+
+  const getRandomState = () => {
+    const newState = state.map(() => Math.random() > 0.5);
+    // Ensure at least 2 neurons are active
+    const activeCount = newState.filter(Boolean).length;
+    if (activeCount < 2) {
+      // Randomly activate additional neurons to reach at least 2
+      const inactiveIndices = newState
+        .map((active, index) => (active ? -1 : index))
+        .filter((i) => i !== -1);
+      const neededActivations = 2 - activeCount;
+      for (
+        let i = 0;
+        i < neededActivations && i < inactiveIndices.length;
+        i++
+      ) {
+        const randomIndex = Math.floor(Math.random() * inactiveIndices.length);
+        const neuronIndex = inactiveIndices.splice(randomIndex, 1)[0];
+        newState[neuronIndex] = true;
+      }
+    }
+    return newState;
+  };
+
+  const animate = () => {
+    setState(getRandomState());
+  };
+
+  useEffect(() => {
+    setState(getRandomState());
+    const id = setInterval(animate, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="w-60 h-45 relative">
+      <img
+        src="/images/features/augmentations/n1.png"
+        className="augmentation-neuron absolute -translate-x-10"
+        style={{ opacity: state[0] ? 1 : 0.2 }}
+      />
+      <img
+        src="/images/features/augmentations/n2.png"
+        className="augmentation-neuron absolute translate-x-10 translate-y-0"
+        style={{ opacity: state[1] ? 1 : 0.2 }}
+      />
+      <img
+        src="/images/features/augmentations/n3.png"
+        className="augmentation-neuron absolute translate-x-25 translate-y-4"
+        style={{ opacity: state[2] ? 1 : 0.2 }}
+      />
+      <img
+        src="/images/features/augmentations/n4.png"
+        className="augmentation-neuron absolute translate-x-40 -translate-y-1"
+        style={{ opacity: state[3] ? 1 : 0.2 }}
+      />
+      <img
+        src="/images/features/augmentations/n5.png"
+        className="augmentation-neuron absolute -translate-x-5 translate-y-15"
+        style={{ opacity: state[4] ? 1 : 0.2 }}
+      />
+      <img
+        src="/images/features/augmentations/n6.png"
+        className="augmentation-neuron absolute translate-x-15 translate-y-15"
+        style={{ opacity: state[5] ? 1 : 0.2 }}
+      />
+      <img
+        src="/images/features/augmentations/n7.png"
+        className="augmentation-neuron absolute translate-x-40 translate-y-12"
+        style={{ opacity: state[6] ? 1 : 0.2 }}
+      />
+    </div>
+  );
 }
 
 export default Landing;
