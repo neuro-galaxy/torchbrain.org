@@ -24,7 +24,7 @@ function Dropdown({ label, items }: DropdownProps) {
         {label} ▾
       </button>
       <div
-        className={`absolute z-10 right-0 ${isOpen ? "visible" : "invisible"}`}
+        className={`absolute z-10 -left-2 sm:right-0 ${isOpen ? "visible" : "invisible"}`}
       >
         <div className="mt-2 py-2 bg-slate-800 border-slate-900 rounded-sm w-[200px]">
           {items.map((item, index) => (
