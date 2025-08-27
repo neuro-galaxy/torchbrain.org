@@ -36,7 +36,7 @@ function Landing() {
         />
         <PackageCard
           title="temporaldata"
-          description="High-performance neural data format"
+          description="Easy-to-use interface for neural data"
           href="https://github.com/neuro-galaxy/temporaldata"
           img_src="/images/temporaldata.png"
         />
@@ -89,7 +89,10 @@ function Landing() {
             <span className="font-bold text-lg text-center">
               Optimized data-loading pipelines
             </span>
-            <div className="w-60 h-60"></div>
+            <img
+              className="h-40 my-4"
+              src="/images/features/optimized-data-loading.png"
+            />
             <span className="font-extralight text-center max-w-[400px]">
               Stream data directly from disk during training. Train on datasets
               bigger than your memory limit
