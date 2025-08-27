@@ -15,7 +15,7 @@ function Landing() {
           Supercharged.
         </div>
 
-        <div className="mt-4 lg:mt-8 px-4 max-w-[900px] text-lg md:text-xl lg:text-2xl font-extralight text-gray-300">
+        <div className="md:mt-8 px-4 max-w-[900px] text-lg md:text-xl lg:text-2xl font-extralight text-gray-300">
           Torch Brain is an ecosystem for building the next generation of
           computational neuroscience models, focused on high-performance and
           ease of development.
@@ -23,7 +23,7 @@ function Landing() {
       </div>
 
       <div className="flex items-center px-8">
-        <div className="flex flex-col md:flex-row md:items-center justify-around gap-2 md:w-(--w-wide) mx-auto md:my-16">
+        <div className="flex flex-col md:flex-row md:items-center justify-around gap-8 md:w-(--w-wide) mx-auto md:my-16">
           <PackageCard
             title="torch_brain"
             description="DL pipeline building blocks and models"
@@ -45,18 +45,18 @@ function Landing() {
         </div>
       </div>
 
-      <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)">
+      <div className="flex flex-col mx-auto py-16 px-8 max-w-(--w-wide)">
         <span className="text-center font-bold text-3xl custom-headline">
           Features
         </span>
 
         <div className="flex flex-wrap justify-center gap-[25px] mt-8">
-          <div className="w-[440px] custom-feature-box">
+          <div className="w-full sm:w-[400px] md:w-[440px] custom-feature-box">
             <span className="font-bold text-xl text-center">
               Multi-recording training
             </span>
             <img
-              className="h-50 my-10"
+              className="w-[400px] h-auto my-10 px-8"
               src="/images/features/multi-recording-training.png"
             />
             <span className="font-extralight text-lg text-center">
@@ -64,7 +64,7 @@ function Landing() {
             </span>
           </div>
 
-          <div className="w-[230px] custom-feature-box">
+          <div className="w-full md:w-[200px] sm:w-[400px] custom-feature-box">
             <span className="font-bold text-xl text-center">
               Based on PyTorch
             </span>
@@ -78,7 +78,7 @@ function Landing() {
             </span>
           </div>
 
-          <div className="w-[500px] custom-feature-box">
+          <div className="w-full sm:w-[400px] md:w-[500px] custom-feature-box overflow-hidden">
             <span className="font-bold text-xl text-center">
               Advanced Data Samplers
             </span>
@@ -88,7 +88,7 @@ function Landing() {
             </span>
           </div>
 
-          <div className="w-[500px] custom-feature-box">
+          <div className="w-full sm:w-[400px] md:w-[500px] custom-feature-box">
             <span className="font-bold text-xl text-center">
               Transforms and Augmentations
             </span>
@@ -99,12 +99,12 @@ function Landing() {
             </span>
           </div>
 
-          <div className="w-[550px] custom-feature-box">
+          <div className="w-full sm:w-[400px] md:w-[550px] custom-feature-box">
             <span className="font-bold text-xl text-center">
               Optimized data-loading pipelines
             </span>
             <img
-              className="h-48 my-12"
+              className="h-auto w-[400px] my-12"
               src="/images/features/optimized-data-loading.png"
             />
             <span className="font-extralight text-lg text-center max-w-[400px]">
@@ -116,7 +116,7 @@ function Landing() {
       </div>
 
       <div
-        className="flex flex-col mx-auto py-16 max-w-(--w-wide)"
+        className="flex flex-col mx-auto py-16 max-w-(--w-wide) px-8 mb-8"
         id="Contribute"
       >
         <span className="text-center font-bold text-3xl custom-headline mb-4">
@@ -221,7 +221,7 @@ function FeatureCardSamplers() {
 
   return (
     <div
-      className="=flex flex-col justify-center"
+      className="flex flex-col justify-center my-8"
       style={{ width: `${total_length}px` }}
     >
       <div className="h-[100px] border-b-[0.5px] flex">
@@ -284,7 +284,7 @@ function FeatureCardAugmentation() {
   }, []);
 
   return (
-    <div className="w-60 h-45 relative">
+    <div className="w-60 h-45 relative my-8">
       <img
         src="/images/features/augmentations/n1.png"
         className="augmentation-neuron absolute -translate-x-10"
