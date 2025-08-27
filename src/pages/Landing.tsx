@@ -152,11 +152,11 @@ function PackageCard({
   return (
     <a className="flex md:flex-col items-center" href={href}>
       <img
-        className="h-30 md:h-50 transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5"
+        className="h-30 md:h-50 md:mb-4 transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5"
         src={img_src}
       ></img>
       <div className="flex flex-col md:items-center">
-        <span className="mt-4 font-mono font-bold md:text-xl">{title}</span>
+        <span className="font-mono font-bold md:text-xl">{title}</span>
         <span className="mt-1 md:text-center text-sm md:text-base">{description}</span>
       </div>
     </a>
