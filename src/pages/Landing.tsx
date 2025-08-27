@@ -58,7 +58,7 @@ function Landing() {
               src="/images/features/multi-recording-training.png"
             />
             <span className="font-extralight text-lg text-center">
-              Train foundation models on multiple datasets
+              Train foundation models on multiple datasets.
             </span>
           </div>
 
@@ -72,7 +72,7 @@ function Landing() {
               alt="PyTorch logo"
             ></img>
             <span className="font-extralight text-lg text-center">
-              Carry over your deep learning expertise
+              Carry over your deep learning expertise.
             </span>
           </div>
 
@@ -82,7 +82,7 @@ function Landing() {
             </span>
             <FeatureCardSamplers />
             <span className="font-extralight text-lg text-center">
-              Sample arbitrary data slices in continuous time
+              Sample arbitrary data slices in continuous time.
             </span>
           </div>
 
@@ -92,7 +92,7 @@ function Landing() {
             </span>
             <FeatureCardAugmentation />
             <span className="font-extralight text-lg text-center max-w-[400px]">
-              A collection of transforms and augmentations like spike binning
+              A collection of transforms and augmentations, like spike binning
               and neuron dropout.
             </span>
           </div>
@@ -107,7 +107,7 @@ function Landing() {
             />
             <span className="font-extralight text-lg text-center max-w-[400px]">
               Stream data directly from disk during training. Train on datasets
-              bigger than your memory limit
+              bigger than your memory limit.
             </span>
           </div>
         </div>
