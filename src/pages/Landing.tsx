@@ -156,8 +156,8 @@ function PackageCard({
         src={img_src}
       ></img>
       <div className="flex flex-col md:items-center">
-        <span className="mt-4 font-mono font-bold text-xl">{title}</span>
-        <span className="mt-1 md:text-center">{description}</span>
+        <span className="mt-4 font-mono font-bold sm:text-xl">{title}</span>
+        <span className="mt-1 md:text-center text-sm sm:text-base">{description}</span>
       </div>
     </a>
   );
