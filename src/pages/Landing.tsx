@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./Landing.css";
 
-
 function Landing() {
   return (
     <div>
@@ -114,19 +113,25 @@ function Landing() {
         </div>
       </div>
 
-      <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)" id="Contribute">
+      <div
+        className="flex flex-col mx-auto py-16 max-w-(--w-wide)"
+        id="Contribute"
+      >
         <span className="text-center font-bold text-3xl custom-headline mb-4">
           Contribute
         </span>
 
         <span className="text-center text-lg">
-          We are new and would appreciate any and all contributions! 
+          We are new and would appreciate any and all contributions!
         </span>
         <span className="text-center text-xl font-medium">
-          <a href="https://discord.gg/kQNKA6B8ZC"> Join our Discord community! <i className="fa-brands fa-discord"></i></a>
+          <a href="https://discord.gg/kQNKA6B8ZC">
+            {" "}
+            Join our Discord community! <i className="fa-brands fa-discord"></i>
+          </a>
         </span>
       </div>
-    <Footer/>
+      <Footer />
     </div>
   );
 }
