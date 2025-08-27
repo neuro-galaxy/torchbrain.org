@@ -119,7 +119,7 @@ function Landing() {
         className="flex flex-col mx-auto py-16 max-w-(--w-wide) px-8 mb-8"
         id="Contribute"
       >
-        <span className="text-center font-bold text-2xl custom-headline mb-4">
+        <span className="text-center font-bold text-3xl custom-headline mb-4">
           Contribute
         </span>
 
