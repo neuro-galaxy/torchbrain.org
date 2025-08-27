@@ -93,7 +93,7 @@ function Header() {
         <div className="flex flex-col items-center gap-4 sm:flex-row justify-between">
           <div className="flex items-center gap-1">
             <img className="h-12" src="/images/torchbrain.png" />
-            <h1 className="text-xl font-bold">Torch Brain</h1>
+            <h1 className="text-2xl sm:text-xl font-bold">Torch Brain</h1>
           </div>
 
           <div className="flex items-center gap-12 sm:font-medium">
