@@ -99,7 +99,7 @@ function Header() {
           <div className="flex items-center gap-12 font-medium">
             <Dropdown label="Packages" items={packagesItems} />
             <Dropdown label="Docs" items={docsItems} />
-            <a>Contribute</a>
+            <a href="/#Contribute">Contribute</a>
           </div>
         </div>
       </div>

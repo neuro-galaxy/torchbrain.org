@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./Landing.css";
 
+
 function Landing() {
   return (
     <div>
@@ -50,20 +51,20 @@ function Landing() {
 
         <div className="flex flex-wrap justify-center gap-[25px] mt-8">
           <div className="w-[440px] custom-feature-box">
-            <span className="font-bold text-lg text-center">
+            <span className="font-bold text-xl text-center">
               Multi-recording training
             </span>
             <img
-              className="h-40 my-10"
+              className="h-50 my-10"
               src="/images/features/multi-recording-training.png"
             />
-            <span className="font-extralight text-center">
+            <span className="font-extralight text-lg text-center">
               Train foundation models on multiple datasets
             </span>
           </div>
 
-          <div className="w-[200px] custom-feature-box">
-            <span className="font-bold text-lg text-center">
+          <div className="w-[230px] custom-feature-box">
+            <span className="font-bold text-xl text-center">
               Based on PyTorch
             </span>
             <img
@@ -71,41 +72,41 @@ function Landing() {
               src="/images/pytorch.png"
               alt="PyTorch logo"
             ></img>
-            <span className="font-extralight text-center">
+            <span className="font-extralight text-lg text-center">
               Carry over your deep learning expertise
             </span>
           </div>
 
           <div className="w-[500px] custom-feature-box">
-            <span className="font-bold text-lg text-center">
+            <span className="font-bold text-xl text-center">
               Advanced Data Samplers
             </span>
             <FeatureCardSamplers />
-            <span className="font-extralight text-center">
+            <span className="font-extralight text-lg text-center">
               Sample arbitrary data slices in continuous time
             </span>
           </div>
 
           <div className="w-[500px] custom-feature-box">
-            <span className="font-bold text-lg text-center">
+            <span className="font-bold text-xl text-center">
               Transforms and Augmentations
             </span>
             <FeatureCardAugmentation />
-            <span className="font-extralight text-center max-w-[400px]">
+            <span className="font-extralight text-lg text-center max-w-[400px]">
               A collection of transforms and augmentations like spike binning
               and neuron dropout.
             </span>
           </div>
 
           <div className="w-[550px] custom-feature-box">
-            <span className="font-bold text-lg text-center">
+            <span className="font-bold text-xl text-center">
               Optimized data-loading pipelines
             </span>
             <img
-              className="h-48 my-4"
+              className="h-48 my-12"
               src="/images/features/optimized-data-loading.png"
             />
-            <span className="font-extralight text-center max-w-[400px]">
+            <span className="font-extralight text-lg text-center max-w-[400px]">
               Stream data directly from disk during training. Train on datasets
               bigger than your memory limit
             </span>
@@ -113,7 +114,7 @@ function Landing() {
         </div>
       </div>
 
-      <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)">
+      <div className="flex flex-col mx-auto py-16 max-w-(--w-wide)" id="Contribute">
         <span className="text-center font-bold text-3xl custom-headline mb-4">
           Contribute
         </span>

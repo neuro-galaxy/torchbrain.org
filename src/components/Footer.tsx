@@ -5,7 +5,7 @@ function Footer() {
       style={{ borderTopWidth: "0.5px" }}
     >
       <div className="mx-auto max-w-(--w-wide)">
-        <div className="text-center">
+        <div className="text-center font-extralight opacity-40">
           <i className="fa-regular fa-copyright"></i> Neuro Galaxy
         </div>
       </div>
