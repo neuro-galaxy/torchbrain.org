@@ -12,7 +12,7 @@ function Landing() {
         <div className="font-extrabold text-4xl sm:text-4xl md:text-5xl lg:text-6xl custom-headline">
           Deep Learning on Neural Data,
           <br />
-          Supercharged.
+          Accelerated.
         </div>
 
         <div className="md:mt-8 px-4 max-w-[900px] text-lg md:text-xl lg:text-2xl font-extralight text-gray-300">
