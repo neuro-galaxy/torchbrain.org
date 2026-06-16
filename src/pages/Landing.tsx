@@ -30,18 +30,6 @@ function Landing() {
             href="https://github.com/neuro-galaxy/torch_brain"
             img_src="/images/torchbrain.png"
           />
-          <PackageCard
-            title="brainsets"
-            description="A collection of neural datasets"
-            href="https://github.com/neuro-galaxy/brainsets"
-            img_src="/images/brainsets.png"
-          />
-          <PackageCard
-            title="temporaldata"
-            description="Easy-to-use interface for neural data"
-            href="https://github.com/neuro-galaxy/temporaldata"
-            img_src="/images/temporaldata.png"
-          />
         </div>
       </div>
 

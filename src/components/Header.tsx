@@ -54,16 +54,6 @@ function Header() {
       href: "https://github.com/neuro-galaxy/torch_brain/",
       img_src: "/images/torchbrain.png",
     },
-    {
-      label: "brainsets",
-      href: "https://github.com/neuro-galaxy/brainsets/",
-      img_src: "/images/brainsets.png",
-    },
-    {
-      label: "temporaldata",
-      href: "https://github.com/neuro-galaxy/temporaldata/",
-      img_src: "/images/temporaldata.png",
-    },
   ];
 
   const docsItems = [
@@ -71,16 +61,6 @@ function Header() {
       label: "torch_brain",
       href: "https://torch-brain.readthedocs.io/en/latest/",
       img_src: "/images/torchbrain.png",
-    },
-    {
-      label: "brainsets",
-      href: "https://brainsets.readthedocs.io/en/latest/",
-      img_src: "/images/brainsets.png",
-    },
-    {
-      label: "temporaldata",
-      href: "https://temporaldata.readthedocs.io/en/latest/",
-      img_src: "/images/temporaldata.png",
     },
   ];
 
