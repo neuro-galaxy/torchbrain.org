@@ -5,12 +5,16 @@ import "./Landing.css";
 function Landing() {
   return (
     <div className="flex flex-col min-h-screen">
-
       <div className="grow"></div>
 
       <div className="flex flex-col gap-8 sm:gap-10 pt-20 sm:pt-24 px-4 items-center text-center">
-        <img className="h-40 sm:h-52 md:h-60 custom-logo-glow" src="/images/torchbrain.png"></img>
-        <div className="font-mono font-extrabold text-4xl sm:text-5xl">torch_brain</div>
+        <img
+          className="h-40 sm:h-52 md:h-60 custom-logo-glow"
+          src="/images/torchbrain.png"
+        ></img>
+        <div className="font-mono font-extrabold text-4xl sm:text-5xl">
+          torch_brain
+        </div>
         <div className="text-lg/8 sm:text-xl/8">
           A PyTorch-friendly open-source library for learning from Neural Data.
           <br className="hidden sm:inline" />
@@ -39,15 +43,9 @@ function Landing() {
 
       <div className="grow"></div>
 
-      <div
-        className="flex flex-col items-center text-center gap-1 mt-20 mb-4 text-gray-300"
-      >
-        <span className="text-2xl font-bold">
-          Contribute
-        </span>
-        <span className="text-lg">
-          We welcome any and all contributions!
-        </span>
+      <div className="flex flex-col items-center text-center gap-1 mt-20 mb-4 text-gray-300">
+        <span className="text-2xl font-bold">Contribute</span>
+        <span className="text-lg">We welcome any and all contributions!</span>
         <span className="flex items-center gap-2 hover:text-white transition text-center text-lg font-medium">
           <a href="https://discord.gg/kQNKA6B8ZC">
             <i className="fa-brands fa-discord"></i> Join our Discord community!
