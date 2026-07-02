@@ -20,7 +20,7 @@
 
 @theme {
   --font-sans: "Manrope", sans-serif;
-  --font-mono: "PT Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
 
   --w-wide: 1500px;
 }
