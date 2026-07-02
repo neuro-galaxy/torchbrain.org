@@ -1,23 +1,16 @@
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./Landing.css";
 
 function Landing() {
   return (
     <div className="flex flex-col min-h-screen">
-
       <div className="flex flex-col items-center gap-8 text-center pt-24 lg:pt-32 pb-16 px-4 custom-headline-bg">
-        <img
-          className="h-80"
-          src="/images/torchbrain.png"
-        ></img>
-        <div className="font-mono font-extrabold text-5xl">
-          torch_brain
-        </div>
+        <img className="h-80" src="/images/torchbrain.png"></img>
+        <div className="font-mono font-extrabold text-5xl">torch_brain</div>
         <div className="text-xl/8">
           A PyTorch-friendly library for learning from Neural Data.
-          <br/>
+          <br />
           Helps you write efficient training pipelines and models.
         </div>
       </div>
@@ -40,7 +33,6 @@ function Landing() {
           <i className="fa-solid fa-book"></i> Docs
         </a>
       </div>
-
 
       <div className="grow"></div>
 
@@ -90,6 +82,5 @@ function InstallCommand({ command }: { command: string }) {
     </button>
   );
 }
-
 
 export default Landing;
