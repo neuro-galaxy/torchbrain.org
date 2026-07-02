@@ -20,13 +20,13 @@
 
 @theme {
   --font-sans: "Manrope", sans-serif;
-  --font-mono: "Martian Mono", monospace;
+  --font-mono: "PT Mono", monospace;
 
   --w-wide: 1500px;
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: #0e0e0e;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 300;

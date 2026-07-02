@@ -5,115 +5,44 @@ import "./Landing.css";
 
 function Landing() {
   return (
-    <div>
-      <Header />
+    <div className="flex flex-col min-h-screen">
 
       <div className="flex flex-col items-center gap-8 text-center pt-24 lg:pt-32 pb-16 px-4 custom-headline-bg">
-        <div className="font-extrabold text-4xl sm:text-4xl md:text-5xl lg:text-6xl custom-headline">
-          Deep Learning on Neural Data,
-          <br />
-          Accelerated.
+        <img
+          className="h-30 md:h-50 md:mb-4 transition delay-0 duration-150 ease-in-out hover:-translate-y-1.5"
+          src="/images/torchbrain.png"
+        ></img>
+        <div className="font-mono font-extrabold text-4xl sm:text-4xl md:text-5xl lg:text-6xl custom-headline">
+          torch_brain
         </div>
-
-        <div className="md:mt-8 px-4 max-w-[900px] text-lg md:text-xl lg:text-2xl font-extralight text-gray-300">
-          Torch Brain is an ecosystem for building the next generation of
-          computational neuroscience models, focused on high-performance and
-          ease of development.
-        </div>
-      </div>
-
-      <div className="flex items-center px-8">
-        <div className="flex flex-col md:flex-row md:items-center justify-around gap-8 md:w-(--w-wide) mx-auto md:my-16">
-          <PackageCard
-            title="torch_brain"
-            description="DL pipeline building blocks and models"
-            href="https://github.com/neuro-galaxy/torch_brain"
-            img_src="/images/torchbrain.png"
-          />
-          <PackageCard
-            title="brainsets"
-            description="A collection of neural datasets"
-            href="https://github.com/neuro-galaxy/brainsets"
-            img_src="/images/brainsets.png"
-          />
-          <PackageCard
-            title="temporaldata"
-            description="Easy-to-use interface for neural data"
-            href="https://github.com/neuro-galaxy/temporaldata"
-            img_src="/images/temporaldata.png"
-          />
+        <div className="max-w-[700px] text-xl font-light text-gray-300">
+          A PyTorch-friendly library for working with Neural Data.
+          <br/>
+          Helps you write efficient training pipelines and models.
         </div>
       </div>
 
-      <div className="flex flex-col mx-auto py-16 px-8 max-w-(--w-wide)">
-        <span className="text-center font-bold text-3xl custom-headline">
-          Features
-        </span>
-
-        <div className="flex flex-wrap justify-center gap-[25px] mt-8">
-          <div className="w-full sm:w-[400px] md:w-[440px] custom-feature-box">
-            <span className="font-bold text-lg md:text-xl text-center">
-              Multi-recording training
-            </span>
-            <img
-              className="w-[400px] h-auto my-10 px-8"
-              src="/images/features/multi-recording-training.png"
-            />
-            <span className="font-extralight md:text-lg text-center">
-              Train foundation models on multiple datasets.
-            </span>
-          </div>
-
-          <div className="w-full md:w-[200px] sm:w-[400px] custom-feature-box">
-            <span className="font-bold text-lg md:text-xl text-center">
-              Based on PyTorch
-            </span>
-            <img
-              className="h-32 my-4"
-              src="/images/pytorch.png"
-              alt="PyTorch logo"
-            ></img>
-            <span className="font-extralight md:text-lg text-center">
-              Carry over your deep learning expertise.
-            </span>
-          </div>
-
-          <div className="w-full sm:w-[400px] md:w-[500px] custom-feature-box overflow-hidden">
-            <span className="font-bold text-lg md:text-xl text-center">
-              Advanced Data Samplers
-            </span>
-            <FeatureCardSamplers />
-            <span className="font-extralight md:text-lg text-center">
-              Sample arbitrary data slices in continuous time.
-            </span>
-          </div>
-
-          <div className="w-full sm:w-[400px] md:w-[500px] custom-feature-box">
-            <span className="font-bold text-lg md:text-xl text-center">
-              Transforms and Augmentations
-            </span>
-            <FeatureCardAugmentation />
-            <span className="font-extralight md:text-lg text-center max-w-[400px]">
-              A collection of transforms and augmentations, like spike binning
-              and neuron dropout.
-            </span>
-          </div>
-
-          <div className="w-full sm:w-[400px] md:w-[550px] custom-feature-box">
-            <span className="font-bold text-lg md:text-xl text-center">
-              Optimized data-loading pipelines
-            </span>
-            <img
-              className="h-auto w-[400px] my-12"
-              src="/images/features/optimized-data-loading.png"
-            />
-            <span className="font-extralight md:text-lg text-center max-w-[400px]">
-              Stream data directly from disk during training. Train on datasets
-              bigger than your memory limit.
-            </span>
-          </div>
+      <div className="flex justify-center px-4 mt-4">
+        <div className="font-mono text-sm md:text-base px-12 py-3 bg-white/5 border border-white/10 rounded-md">
+          pip install torch torch_brain
         </div>
       </div>
+
+      <div className="flex justify-center gap-8 mt-6 text-lg md:text-xl text-gray-300">
+        <a
+          className="flex items-center gap-2 hover:text-white transition"
+          href="https://github.com/neuro-galaxy/torch_brain"
+        >
+          <i className="fa-brands fa-github"></i> GitHub
+        </a>
+        <a
+          className="flex items-center gap-2 hover:text-white transition"
+          href="https://torch-brain.readthedocs.io/en/latest/"
+        >
+          <i className="fa-solid fa-book"></i> Docs
+        </a>
+      </div>
+
 
       <div
         className="flex flex-col mx-auto py-16 max-w-(--w-wide) px-8 mb-8"
@@ -133,6 +62,8 @@ function Landing() {
           </a>
         </span>
       </div>
+
+      <div className="grow"></div>
       <Footer />
     </div>
   );
