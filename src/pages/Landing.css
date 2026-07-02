@@ -5,3 +5,8 @@
     rgba(0, 0, 0, 0) 50%
   );
 }
+
+.custom-logo-glow {
+  filter: drop-shadow(0 0 20px rgba(255, 120, 40, 0.25))
+    drop-shadow(0 0 50px rgba(255, 90, 30, 0.15));
+}

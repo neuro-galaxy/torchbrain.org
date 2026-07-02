@@ -6,16 +6,18 @@ function Landing() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      <div className="flex flex-col gap-10 pt-50 px-4 items-center">
-        <img className="h-60" src="/images/torchbrain.png"></img>
+      <div className="grow"></div>
+
+      <div className="flex flex-col gap-10 pt-24 px-4 items-center text-center">
+        <img className="h-60 custom-logo-glow" src="/images/torchbrain.png"></img>
         <div className="font-mono font-extrabold text-5xl">torch_brain</div>
         <div className="text-xl/8">
-          A PyTorch-friendly library for learning from Neural Data.
+          A PyTorch-friendly open-source library for learning from Neural Data.
           <br />
           Helps you write efficient training pipelines and models.
         </div>
 
-        <div className="flex justify-center px-4">
+        <div className="flex justify-center">
           <InstallCommand command="pip install torch torch_brain" />
         </div>
 
@@ -38,20 +40,17 @@ function Landing() {
       <div className="grow"></div>
 
       <div
-        className="flex flex-col mx-auto py-8 max-w-(--w-wide) px-8 mb-8 text-gray-200"
-        id="Contribute"
+        className="flex flex-col items-center text-center gap-1 mt-20 mb-4 text-gray-300"
       >
-        <span className="text-center font-bold text-3xl custom-headline mb-4">
+        <span className="text-2xl font-bold">
           Contribute
         </span>
-
-        <span className="text-center text-lg">
-          We are new and would appreciate any and all contributions!
+        <span className="text-lg">
+          We welcome any and all contributions!
         </span>
-        <span className="text-center text-xl font-medium">
+        <span className="flex items-center gap-2 hover:text-white transition text-center text-lg font-medium">
           <a href="https://discord.gg/kQNKA6B8ZC">
-            {" "}
-            Join our Discord community! <i className="fa-brands fa-discord"></i>
+            <i className="fa-brands fa-discord"></i> Join our Discord community!
           </a>
         </span>
       </div>
