@@ -8,12 +8,12 @@ function Landing() {
 
       <div className="grow"></div>
 
-      <div className="flex flex-col gap-10 pt-24 px-4 items-center text-center">
-        <img className="h-60 custom-logo-glow" src="/images/torchbrain.png"></img>
-        <div className="font-mono font-extrabold text-5xl">torch_brain</div>
-        <div className="text-xl/8">
+      <div className="flex flex-col gap-8 sm:gap-10 pt-20 sm:pt-24 px-4 items-center text-center">
+        <img className="h-40 sm:h-52 md:h-60 custom-logo-glow" src="/images/torchbrain.png"></img>
+        <div className="font-mono font-extrabold text-4xl sm:text-5xl">torch_brain</div>
+        <div className="text-lg/8 sm:text-xl/8">
           A PyTorch-friendly open-source library for learning from Neural Data.
-          <br />
+          <br className="hidden sm:inline" />
           Helps you write efficient training pipelines and models.
         </div>
 
@@ -21,7 +21,7 @@ function Landing() {
           <InstallCommand command="pip install torch torch_brain" />
         </div>
 
-        <div className="flex justify-center gap-8 text-xl text-gray-300">
+        <div className="flex justify-center gap-8 text-lg sm:text-xl text-gray-300">
           <a
             className="flex items-center gap-2 hover:text-white transition"
             href="https://github.com/neuro-galaxy/torch_brain"
@@ -79,7 +79,7 @@ function InstallCommand({
     <button
       onClick={handleCopy}
       title="Click to copy"
-      className={`flex items-center gap-4 font-mono text-sm md:text-base px-12 py-3 bg-white/5 border border-white/10 rounded-md cursor-pointer hover:bg-white/10 transition ${className}`}
+      className={`flex items-center gap-4 font-mono text-sm md:text-base px-6 sm:px-12 py-3 bg-white/5 border border-white/10 rounded-md cursor-pointer hover:bg-white/10 transition ${className}`}
     >
       {command}
       <i
